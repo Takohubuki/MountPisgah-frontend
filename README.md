@@ -1,7 +1,9 @@
-# Vue 3 + Vite
-
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+# Mount Pisgah
+***
+> 做挖井人，得活水井
+## 1. 使用工具
+1. git(代码管理)
+2. vue(前端)
+3. java(后端)
+4. MySQL(数据库，待定)
+5. ...

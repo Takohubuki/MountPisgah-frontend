@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* background-color: #242424; */
 }
 
 .section {
@@ -24,9 +24,9 @@
   color: white;
 }
 
-#section1 {
-  background-image: url('assets/img/image1.jpg');
-}
+/* #section1 { */
+  /* background-image: url('assets/img/image1.jpg'); */
+/* } */
 
 #section2 {
   background-image: url('assets/img/image2.jpg');

@@ -7,7 +7,7 @@
 - 团契动态
 - 团契事工
 
-![主要内容](/src/assets/img/MountPisgahIntro.png)
+![主要内容](./src/assets/img/MountPisgahIntro.png)
 
 
 ## 2. 解决方案
@@ -16,3 +16,22 @@
 3. 后端（Express.js/SpringBoot）
 4. 数据库（MongoDB/其他）
 5. 音视频存储（AWS S3/Google Cloud Storage/Azure Blob Storage）
+
+## 3. 项目启动
+1. 拉取项目代码
+```shell
+git clone https://github.com/Takohubuki/MountPisgah-frontend.git
+```
+
+2. 安装nodejs
+
+3. 安装依赖环境
+```shell
+// 进入项目文件夹运行以下命令
+npm install
+```
+
+4. 运行
+```shell
+npm run dev
+```

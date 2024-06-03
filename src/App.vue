@@ -39,6 +39,9 @@ export default {
 </template>
 
 <style scoped>
+main {
+  margin-top: 64px;
+}
 
 a {
   color: #fff;
@@ -47,7 +50,9 @@ a {
 
 .toolbar {
   position: fixed;
+  top: 0;
   width: 100%;
+  z-index: 10;
 }
 
 .toolbar-small {
@@ -58,13 +63,15 @@ a {
 .title-small {
   font-size: 16px !important;
   transition: font-size 0.3s;
+  margin-bottom: 10px;
 }
 
 .btn-small {
   font-size: 12px !important;
   height: 32px !important;
   min-width: 32px !important;
-  padding: 0 8px !important;
+  /* padding: 0 8px !important; */
+  margin-bottom: 10px;
   transition: all 0.3s;
 }
 </style>

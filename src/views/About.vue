@@ -1,7 +1,7 @@
 <template>
   <div class="about">
-    <h1>About Page</h1>
-    <p>Welcome to the About Page!</p>
+    <h1>团契简介</h1>
+    <p>下沙学生团契简介内容</p>
   </div>
 </template>
 

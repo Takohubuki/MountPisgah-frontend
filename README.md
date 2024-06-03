@@ -20,10 +20,14 @@
 ## 3. 项目启动
 1. 拉取项目代码
 ```shell
+// 在终端里运行
 git clone https://github.com/Takohubuki/MountPisgah-frontend.git
 ```
 
 2. 安装nodejs
+
+> [下载地址](https://nodejs.cn/download/)
+下载20.13版本（大版本一样即可）
 
 3. 安装依赖环境
 ```shell

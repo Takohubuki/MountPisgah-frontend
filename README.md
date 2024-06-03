@@ -7,7 +7,7 @@
 - 团契动态
 - 团契事工
 
-![主要内容](./src/assets/img/MountPisgahIntro.png)
+![主要内容](src/assets/img/MountPisgahIntro.png)
 
 
 ## 2. 解决方案

@@ -14,16 +14,6 @@
     </div>
   </div>
 
-  <div class="section" id="section2">
-    <div class="container section-content">
-      <div class="text-h3">回顾</div>
-      <div class="text-body-1" id="backward-content">
-        回顾过去，我们不禁感慨万千。在过去的一年中，我们经历了许多挑战和成就。我们团结一心，克服了种种困难，取得了令人瞩目的进展。无论是在技术研发上的突破，还是在团队合作上的默契配合，
-        都展现出了我们的实力和创造力。
-      </div>
-    </div>
-  </div>
-
   <div class="section" id="section3">
     <div class="container section-content">
       <div class="text-h3">展望</div>

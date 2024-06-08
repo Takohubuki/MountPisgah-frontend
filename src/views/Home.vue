@@ -4,13 +4,18 @@
  </div>
  <div class="section" id="section1">
     <div class="container section-content">
-      <v-carousel hide-delimiters>
+      <!-- <v-carousel hide-delimiters>
         <v-carousel-item src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" cover></v-carousel-item>
 
         <v-carousel-item src="https://cdn.vuetifyjs.com/images/cards/hotel.jpg" cover></v-carousel-item>
 
         <v-carousel-item src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" cover></v-carousel-item>
-      </v-carousel>
+      </v-carousel> -->
+      <video-player
+        class="video-player vjs-custom-skin"
+        ref="videoPlayer"
+        :playsinline="true"
+        :options="playerOptions"/>
     </div>
   </div>
 
@@ -48,7 +53,21 @@
 
 <script>
 export default {
-  name: 'Home'
+  name: 'Home',
+  data() {
+    return {
+      playerOptions: {
+        preload: 'auto',
+        autoplay: true,
+        loop: true,
+        controls: true,
+        sources: [{
+          src: 'localhost:8000/video',
+          type: 'video/mp4'
+        }]
+      }
+    }
+  }
 }
 </script>
 

@@ -63,6 +63,8 @@ export default {
         controls: true,
         sources: [{
           src: 'http://localhost:8000/xiashafellowship.mp4',
+          // 使用OSS的情况需要公开权限
+          // src: 'https://sgp1.vultrobjects.com/videos/xiashafellowship.mp4',
           type: 'video/mp4'
         }]
       }

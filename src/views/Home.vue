@@ -62,7 +62,7 @@ export default {
         loop: true,
         controls: true,
         sources: [{
-          src: 'localhost:8000/video',
+          src: 'http://localhost:8000/xiashafellowship.mp4',
           type: 'video/mp4'
         }]
       }
@@ -85,8 +85,15 @@ export default {
 }
 
 /* #section1 {
-  background-image: url('assets/img/image1.jpg');
+  display: flex;
+  justify-content: center;
 } */
+ .video-player {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+  max-height: 450px;
+ }
 
 #section2 {
   color: black;
@@ -120,6 +127,11 @@ export default {
 #forward-content {
   margin-top: 20px;
   /* width: 60%; */
+}
+
+#wishes {
+  margin-top: 20px;
+  padding-right: 10vw;
 }
 
 .section {

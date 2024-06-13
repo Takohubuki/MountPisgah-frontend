@@ -84,6 +84,7 @@ export default {
   color: black;
   height: 9vh;
   padding-top: 3vh;
+  margin-top: 64px;
 }
 
 /* #section1 {

@@ -1,4 +1,5 @@
 <template>
+    <Navbar />
     <div class="work">
         <div class="work-title">
             <div class="text-h4">团契事工</div>
@@ -89,17 +90,26 @@
             </v-container>
         </v-item-group>
     </div>
+    <Footer />
 </template>
 
 <script>
+import Navbar from '../components/Nav.vue';
+import Footer from '../components/Footer.vue';
+
 export default {
-    name: 'Work'
+    name: 'Work',
+    components: {
+        Navbar,
+        Footer
+    },
 }
 </script>
 
 <style scoped>
 .work {
     padding: 1vw;
+    margin-top: 64px;
 }
 
 .work-title {

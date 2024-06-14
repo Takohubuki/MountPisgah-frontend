@@ -22,7 +22,9 @@ const routes = [
       { path: 'course', component: () => import('./views/holyofholies/Course.vue') },
       { path: 'news', component: () => import('./views/holyofholies/News.vue') },
     ]
-  }
+  },
+  { path: '/login', component: () => import('./views/Login.vue') },
+
 ]
 
 const router = createRouter({

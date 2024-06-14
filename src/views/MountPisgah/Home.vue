@@ -107,7 +107,7 @@ export default {
 }
 
 #section3 {
-  background-image: url('../assets/img/image1.jpg');
+  background-image: url('../../assets/img/image1.jpg');
   padding-left: calc(40%);
   padding-top: 5vw;
   padding-bottom: 5vw;

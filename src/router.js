@@ -1,14 +1,12 @@
 // src/router.js
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from './views/Home.vue'
-import About from './views/About.vue'
-import News from './views/News.vue'
-import Work from './views/Work.vue'
-import Course from './views/Course.vue'
-import QodeshHaQodashim from './holyofholies/QodeshHaQodashim.vue'
-import Login from './holyofholies/Login.vue'
-import HolyofHolies from './holyofholies/HolyofHolies.vue'
-import MountPisgah from './views/MountPisgahLayout.vue'
+import About from './views/MountPisgah/About.vue'
+import News from './views/MountPisgah/News.vue'
+import Work from './views/MountPisgah/Work.vue'
+import Course from './views/MountPisgah/Course.vue'
+import QodeshHaQodashim from './views/holyofholies/QodeshHaQodashim.vue'
+import HolyofHolies from './views/holyofholies/HolyofHolies.vue'
+import MountPisgah from './views/MountPisgah/MountPisgahLayout.vue'
 
 const routes = [
   { path: '/', component:  MountPisgah},
@@ -21,8 +19,8 @@ const routes = [
     component: QodeshHaQodashim,
     children: [
       { path: '', component: HolyofHolies },
-      // { path: '', component: Login },
-      { path: '/dashboard', component: HolyofHolies }
+      { path: 'course', component: () => import('./views/holyofholies/Course.vue') },
+      { path: 'news', component: () => import('./views/holyofholies/News.vue') },
     ]
   }
 ]

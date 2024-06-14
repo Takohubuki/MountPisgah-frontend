@@ -68,8 +68,4 @@ export default {
   transition: all 0.3s;
 }
 
-a {
-  color: #fff;
-  text-decoration: none;
-}
 </style>

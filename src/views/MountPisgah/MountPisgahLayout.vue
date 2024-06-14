@@ -1,7 +1,7 @@
 <script>
-import Navbar from '../components/Nav.vue';
-import Footer from '../components/Footer.vue';
-import Home from '../views/Home.vue';
+import Navbar from '../../components/Nav.vue';
+import Footer from '../../components/Footer.vue';
+import Home from './Home.vue';
 
 export default {
   components: {

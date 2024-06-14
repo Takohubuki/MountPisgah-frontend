@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import Navbar from '../components/Nav.vue';
-import Footer from '../components/Footer.vue';
+import Navbar from '../../components/Nav.vue';
+import Footer from '../../components/Footer.vue';
 
 export default {
   name: 'About',

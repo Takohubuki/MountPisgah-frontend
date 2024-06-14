@@ -17,6 +17,9 @@ export default {
   </v-app>
 </template>
 
-<style scoped>
-
+<style >
+a {
+  color: #fff;
+  text-decoration: none;
+}
 </style>

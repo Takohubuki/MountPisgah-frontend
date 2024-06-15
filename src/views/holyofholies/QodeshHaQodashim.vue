@@ -1,24 +1,7 @@
 <template>
   <v-app>
     <v-layout>
-      <v-navigation-drawer expand-on-hover rail color="primary">
-        <v-list>
-          <v-list-item prepend-avatar="../../assets/xiashafellowship.jpg" title="毗斯迦山"></v-list-item>
-        </v-list>
-
-        <v-divider></v-divider>
-
-        <v-list density="compact" nav>
-          <RouterLink to="/holyofholies/course">
-            <v-list-item prepend-icon="mdi-folder" title="信息" value="信息"></v-list-item>
-          </RouterLink>
-
-          <RouterLink to="/holyofholies/news">
-            <v-list-item prepend-icon="mdi-account-multiple" title="动态" value="动态"></v-list-item>
-          </RouterLink>
-        </v-list>
-
-      </v-navigation-drawer>
+      <NavDrawer />
 
       <v-main>
         <RouterView />
@@ -30,9 +13,14 @@
 </template>
 
 <script>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
+import NavDrawer from '../../components/NavDrawer.vue'
+
 export default {
   name: 'QodeshHaQodashim',
+  components: {
+    NavDrawer
+  }
 }
 </script>
 

@@ -2,7 +2,9 @@
     <v-container class="align-center mb-12">
         <v-row>
             <v-col>
-                <v-btn icon="mdi-arrow-left-bold" size="large"></v-btn>
+                <RouterLink to="/holyofholies/course">
+                    <v-btn icon="mdi-arrow-left-bold" size="large"></v-btn>
+                </RouterLink>
             </v-col>
         </v-row>
         <v-row>
@@ -11,8 +13,8 @@
                     hide-details></v-text-field>
             </v-col>
             <v-col cols="6">
-                <v-combobox label="信息分类" :items="['读经', '试讲', '造就', '福音']" v-model="series" variant="outlined"></v-combobox>
-                <!-- <v-btn icon="mdi-plus" size="large" @click="addSeries"></v-btn> -->
+                <v-combobox label="信息分类" :items="series_arr" v-model="series"
+                    variant="outlined"></v-combobox>
             </v-col>
         </v-row>
         <v-row>
@@ -30,6 +32,7 @@
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router';
 import Vditor from 'vditor';
 import 'vditor/dist/index.css';
 
@@ -43,6 +46,10 @@ let series = ref('');
 let content = ref('');
 let audio = ref('');
 
+const series_arr = ['读经', '试讲', '造就', '福音'];
+
+const router = useRouter();
+
 onMounted(() => {
     contentEditor = new Vditor('vditor', {
         height: 300,
@@ -52,8 +59,8 @@ onMounted(() => {
         cache: {
             enable: false,
         },
+        mode: 'sv',
     })
-    // contentEditor.value.setValue('Hello, Vditor!');
 })
 
 const submit = () => {
@@ -66,6 +73,7 @@ const submit = () => {
         publish_date: new Date(),
     }).then((res) => {
         console.log(res);
+        router.push('/holyofholies/course');
     }).catch((err) => {
         console.error(err);
     })

@@ -8,8 +8,8 @@
         <v-text-field v-model="title" class="ma-2" density="compact" placeholder="搜索标题" hide-details></v-text-field>
         <v-text-field v-model="series" class="ma-2" density="compact" placeholder="搜索系列" hide-details></v-text-field>
         <v-spacer></v-spacer>
-        <v-btn class="ma-2" color="primary" variant="tonal" @click="publish_course">发布</v-btn>
-        <v-btn class="ma-2" color="info" variant="tonal" @click="edit_course">修改</v-btn>
+        <RouterLink to="/holyofholies/publish_course"><v-btn class="ma-2" color="primary" variant="tonal" @click="publish_course">发布</v-btn></RouterLink>
+        <!-- <RouterLink><v-btn class="ma-2" color="info" variant="tonal" @click="edit_course">修改</v-btn></RouterLink> -->
         <v-btn class="ma-2" color="error" variant="tonal" @click="delete_course">删除</v-btn>
       </v-toolbar>
     </template>
@@ -21,7 +21,7 @@ const desserts = [];
 
 import axios from 'axios';
 
-const API_URL = '/api/list_courses';
+const API_URL = '/api/course/list';
 
 export default {
   data: () => ({

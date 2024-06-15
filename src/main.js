@@ -12,6 +12,7 @@ import router from './router'
 import './style.css'
 import 'video.js/dist/video-js.css'
 import App from './App.vue'
+import 'vditor/dist/index.css';
 
 const vuetify = createVuetify({
   components,

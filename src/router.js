@@ -21,6 +21,7 @@ const routes = [
       { path: '', component: HolyofHolies },
       { path: 'course', component: () => import('./views/holyofholies/Course.vue') },
       { path: 'news', component: () => import('./views/holyofholies/News.vue') },
+      { path: 'publish_course', component: () => import('./views/holyofholies/PublishCourse.vue')}
     ]
   },
   { path: '/login', component: () => import('./views/Login.vue') },

@@ -3,7 +3,7 @@
     <v-layout>
       <v-navigation-drawer expand-on-hover rail color="primary">
         <v-list>
-          <v-list-item prepend-avatar="https://randomuser.me/api/portraits/women/85.jpg" title="毗斯迦山"></v-list-item>
+          <v-list-item prepend-avatar="../../assets/xiashafellowship.jpg" title="毗斯迦山"></v-list-item>
         </v-list>
 
         <v-divider></v-divider>

@@ -19,7 +19,19 @@
         </v-row>
         <v-row>
             <v-col cols="12">
-                <div id="vditor"></div>
+                <!-- <div id="vditor"></div> -->
+                <Toolbar
+                    style="border-bottom: 1px solid #ccc;"
+                    :editor="editorRef"
+                    :defaultConfig="toolbarConfig"
+                    :mode="mode"
+                    />
+                <Editor 
+                    style="height: 500px; overflow-y: hidden"
+                    v-model="valueHTML"
+                    :defaultConfig="editorConfig"
+                    :mode="mode"
+                    @onCreated="handleCreated"/>
             </v-col>
         </v-row>
         <v-row>
@@ -33,14 +45,15 @@
 
 <script setup>
 import { useRouter } from 'vue-router';
-import Vditor from 'vditor';
-import 'vditor/dist/index.css';
+// import Vditor from 'vditor';
+// import 'vditor/dist/index.css';
+import '@wangeditor/editor/dist/css/style.css';
+import { Editor, Toolbar } from '@wangeditor/editor-for-vue';
 
 import axios from 'axios';
 
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, shallowRef, onBeforeUnmount } from 'vue';
 
-let contentEditor;
 let title = ref('');
 let series = ref('');
 let content = ref('');
@@ -50,25 +63,51 @@ const series_arr = ['读经', '试讲', '造就', '福音'];
 
 const router = useRouter();
 
+// 编辑器实例
+const editorRef = shallowRef();
+
+// HTML内容
+const valueHTML = ref('');
+
+const toolbarConfig = {
+    pin: true,
+}
+const editorConfig = {
+    placeholder: '请输入内容',
+}
+
 onMounted(() => {
-    contentEditor = new Vditor('vditor', {
-        height: 300,
-        toolbarConfig: {
-            pin: true,
-        },
-        cache: {
-            enable: false,
-        },
-        mode: 'sv',
-    })
+    // contentEditor = new Vditor('vditor', {
+    //     height: 300,
+    //     toolbarConfig: {
+    //         pin: true,
+    //     },
+    //     cache: {
+    //         enable: false,
+    //     },
+    //     mode: 'sv',
+    // })
 })
 
+onBeforeUnmount(() => {
+    // contentEditor.destroy();
+    const editor = editorRef.value;
+    if (editor == null) return;
+    editor.destroy();
+})
+
+const handleCreated = (editor) => {
+    editorRef.value = editor;
+}
+
+const mode = ref('default')
+
 const submit = () => {
-    console.log(contentEditor.getValue());
+    console.log(valueHTML.value);
     axios.post('/api/course/publish', {
         title: title.value,
         series: series.value,
-        content: contentEditor.getValue(),
+        content: valueHTML.value,
         audio: audio.value,
         publish_date: new Date(),
     }).then((res) => {

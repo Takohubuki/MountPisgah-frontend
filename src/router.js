@@ -7,6 +7,7 @@ import Course from './views/MountPisgah/Course.vue'
 import QodeshHaQodashim from './views/holyofholies/QodeshHaQodashim.vue'
 import HolyofHolies from './views/holyofholies/HolyofHolies.vue'
 import MountPisgah from './views/MountPisgah/MountPisgahLayout.vue'
+import CourseDetail from './views/MountPisgah/CourseDetail.vue'
 
 const routes = [
   { path: '/', component:  MountPisgah},
@@ -14,6 +15,7 @@ const routes = [
   { path: '/news', component: News },
   { path: '/work', component: Work },
   { path: '/course', component: Course },
+  { path: '/courseDetail/:id', name: 'courseDetail', component: CourseDetail, props: true },
   {
     path: '/holyofholies',
     component: QodeshHaQodashim,

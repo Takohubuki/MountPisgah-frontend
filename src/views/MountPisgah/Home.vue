@@ -1,6 +1,6 @@
 <template>
  <div class="banner">
-    <p>直到我在毗斯迦山，发现我家极目一看，脱下帐篷，安静等候，信心变见，盼望成就</p>
+    <p>直到我在毗斯迦山，发现我家极目一看，脱下帐篷，安静等候，信心变见，盼望成就！</p>
  </div>
  <div class="section" id="section1">
     <div class="container section-content">

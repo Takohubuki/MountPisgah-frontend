@@ -1,7 +1,7 @@
 <template>
     <Navbar />
     <v-container class="course">
-        <Series :series-list="seriesList" :current-series="series" @filter-courses="getCourse" />
+        <Series :series-list="seriesList" :current-series="series" @filter-courses="getCourse(series)" />
         <v-card variant="flat">
             <v-card-title>
                 <span class="text-h4">{{ displaySeries }}</span>
@@ -76,6 +76,7 @@ export default {
                 const { courses } = res.data;
                 this.courses = courses;
                 this.series = series;
+                console.log(this.courses);
             }).catch(err => {
                 console.log(err);
             });

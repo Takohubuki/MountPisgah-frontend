@@ -12,6 +12,7 @@
     "@wangeditor/editor": "^5.1.23",
     "@wangeditor/editor-for-vue": "^5.1.12",
     "axios": "^1.7.2",
+    "mongodb": "^6.7.0",
     "vditor": "^3.10.4",
     "vue": "^3.4.21",
     "vue-router": "4",
